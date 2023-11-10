@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "open_booking_backend": {
+      "main": "src/open_booking_backend/main.mo",
+      "type": "motoko"
+    },
+    "open_booking_frontend": {
+      "dependencies": [
+        "open_booking_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/open_booking_frontend/src/index.html"
+      },
+      "source": [
+        "src/open_booking_frontend/assets",
+        "dist/open_booking_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
